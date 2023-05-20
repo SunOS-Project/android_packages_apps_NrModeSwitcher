@@ -1,0 +1,3 @@
+-keep class org.nameless.nrmode.BootCompletedReceiver
+-keep class org.nameless.nrmode.NrModeSettingsActivity
+-keep class org.nameless.nrmode.service.SimCardListenerService
