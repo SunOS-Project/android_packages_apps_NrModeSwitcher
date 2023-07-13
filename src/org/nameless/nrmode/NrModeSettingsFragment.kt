@@ -65,7 +65,7 @@ class NrModeSettingsFragment : PreferenceFragmentCompat(),
     override fun onPreferenceChange(preference: Preference?, newValue: Any?): Boolean {
         if (preference == preferredModeSim1 && newValue is String) {
             newValue.toInt().let {
-                if (setNrMode(SIM_CARD_1, it)) {
+                if (setNrMode(SIM_CARD_1, it, true)) {
                     setUserPreferredNrMode(requireContext(), SIM_CARD_1, it)
                     preferredModeSim1.setSummary(
                         preferredModeSim1.getEntries()[
@@ -78,7 +78,7 @@ class NrModeSettingsFragment : PreferenceFragmentCompat(),
             }
         } else if (preference == preferredModeSim2 && newValue is String) {
             newValue.toInt().let {
-                if (setNrMode(SIM_CARD_2, it)) {
+                if (setNrMode(SIM_CARD_2, it, true)) {
                     setUserPreferredNrMode(requireContext(), SIM_CARD_2, it)
                     preferredModeSim2.setSummary(
                         preferredModeSim2.getEntries()[

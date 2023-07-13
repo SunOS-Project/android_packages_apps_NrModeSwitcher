@@ -83,10 +83,14 @@ object OplusRadioWrapper {
         return SystemProperties.getInt(PROP_AUTO_MODE, MODE_NSA_PRE)
     }
 
-    fun setNrMode(simId: Int, mode: Int): Boolean {
+    fun setNrMode(simId: Int, mode: Int, fromUser: Boolean = false): Boolean {
         if (!checkService(simId)) {
             logE(TAG, "Oplus radio for simId $simId is null")
             return false
+        }
+        if (mode == MODE_AUTO && !fromUser) {
+            logD(TAG, "Skip set nr mode for non-user-requested auto mode")
+            return true
         }
         val realMode = convertMode(mode)
         if (!isModeValid(realMode)) {
