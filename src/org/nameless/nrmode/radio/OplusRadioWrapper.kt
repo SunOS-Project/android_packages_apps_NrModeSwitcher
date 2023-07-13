@@ -80,7 +80,7 @@ object OplusRadioWrapper {
         if (mode != MODE_AUTO) {
             return mode
         }
-        return SystemProperties.getInt(PROP_AUTO_MODE, MODE_SA_PRE)
+        return SystemProperties.getInt(PROP_AUTO_MODE, MODE_NSA_PRE)
     }
 
     fun setNrMode(simId: Int, mode: Int): Boolean {
