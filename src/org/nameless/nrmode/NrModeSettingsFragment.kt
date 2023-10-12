@@ -56,7 +56,12 @@ class NrModeSettingsFragment : PreferenceFragmentCompat(),
         registerSimStateChangeListener(true)
         updatePreferenceState()
     }
-    
+
+    override fun onStop() {
+        registerSimStateChangeListener(false)
+        super.onStop()
+    }
+
     override fun onDestroy() {
         registerSimStateChangeListener(false)
         super.onDestroy()
