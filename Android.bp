@@ -16,6 +16,10 @@ android_app {
     required: [
         "privapp_whitelist_nrmode",
     ],
+    resource_dirs: [
+        "res",
+        "res-sdk",
+    ],
     srcs: [
         "src/**/*.java",
         "src/**/*.kt",
@@ -25,7 +29,6 @@ android_app {
         "android.hidl.manager-V1.0-java",
         "androidx.core_core",
         "androidx.preference_preference",
-        "org.custom.settings.resources",
     ],
 }
    
