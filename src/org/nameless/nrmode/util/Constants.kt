@@ -8,6 +8,8 @@ package org.nameless.nrmode.util.Constants
 import android.os.SystemProperties
 import android.util.Log
 
+import org.nameless.os.DebugConstants.DEBUG_NR_MODE
+
 const val SIM_CARD_1 = 1
 const val SIM_CARD_2 = 2
 
@@ -27,10 +29,8 @@ const val PROP_AUTO_MODE = "persist.sys.nameless.radio.auto_nr_mode"
 
 const val INTENT_SIM_STATE_CHANGED_CUSTOM = "org.nameless.nrmode.intent.SIM_STATE_CHANGED"
 
-val DEBUG = SystemProperties.getBoolean("persist.sys.nameless.radio.debug", false)
-
 fun logD(tag: String, message: String) {
-    if (DEBUG) {
+    if (DEBUG_NR_MODE) {
         Log.d(tag, message)
     }
 }
