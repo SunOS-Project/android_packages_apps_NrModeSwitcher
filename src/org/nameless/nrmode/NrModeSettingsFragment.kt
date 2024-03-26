@@ -67,7 +67,7 @@ class NrModeSettingsFragment : PreferenceFragmentCompat(),
         super.onDestroy()
     }
 
-    override fun onPreferenceChange(preference: Preference?, newValue: Any?): Boolean {
+    override fun onPreferenceChange(preference: Preference, newValue: Any): Boolean {
         if (preference == preferredModeSim1 && newValue is String) {
             newValue.toInt().let {
                 if (setNrMode(SIM_CARD_1, it, true)) {
