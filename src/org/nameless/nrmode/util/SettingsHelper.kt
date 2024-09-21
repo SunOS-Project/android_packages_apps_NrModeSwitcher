@@ -32,7 +32,7 @@ object SettingsHelper {
             else -> MODE_AUTO
         }
     }
-    
+
     fun setUserPreferredNrMode(context: Context, simId: Int, mode: Int) {
         when (simId) {
             SIM_CARD_1 -> {

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 The Nameless-AOSP Project
+ * Copyright (C) 2023-2024 The Nameless-AOSP Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -20,7 +20,7 @@ import android.telephony.TelephonyManager.SIM_STATE_READY
 
 import com.android.internal.telephony.TelephonyIntents.ACTION_SIM_STATE_CHANGED
 
-import org.nameless.nrmode.radio.OplusRadioWrapper.setNrMode
+import org.nameless.nrmode.radio.OplusRadioHelper.setNrMode
 import org.nameless.nrmode.util.Constants.INTENT_SIM_STATE_CHANGED_CUSTOM
 import org.nameless.nrmode.util.Constants.SIM_CARD_1
 import org.nameless.nrmode.util.Constants.SIM_CARD_2
@@ -28,7 +28,7 @@ import org.nameless.nrmode.util.Constants.logD
 import org.nameless.nrmode.util.SettingsHelper.getUserPreferredNrMode
 import org.nameless.nrmode.util.SimStateHelper.isSimCardAvailable
 import org.nameless.nrmode.util.SimStateHelper.setSimCardAvailable
- 
+
 class SimCardListenerService : Service() {
 
     private var telephonyManager: TelephonyManager? = null
@@ -66,7 +66,7 @@ class SimCardListenerService : Service() {
 
         telephonyManager = getSystemService(TelephonyManager::class.java)
 
-        airplaneMode = Settings.Global.getInt(contentResolver, 
+        airplaneMode = Settings.Global.getInt(contentResolver,
                 Settings.Global.AIRPLANE_MODE_ON, 0) == 1
         sim1Available = isSimCardAvailableInternal(0)
         sim2Available = isSimCardAvailableInternal(1)

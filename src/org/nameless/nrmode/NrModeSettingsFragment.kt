@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 The Nameless-AOSP Project
+ * Copyright (C) 2023-2024 The Nameless-AOSP Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -18,7 +18,7 @@ import androidx.preference.Preference.OnPreferenceChangeListener
 import androidx.preference.PreferenceFragmentCompat
 
 import org.nameless.nrmode.R
-import org.nameless.nrmode.radio.OplusRadioWrapper.setNrMode
+import org.nameless.nrmode.radio.OplusRadioHelper.setNrMode
 import org.nameless.nrmode.util.Constants.INTENT_SIM_STATE_CHANGED_CUSTOM
 import org.nameless.nrmode.util.Constants.KEY_NR_MODE_SIM_1
 import org.nameless.nrmode.util.Constants.KEY_NR_MODE_SIM_2
@@ -52,19 +52,18 @@ class NrModeSettingsFragment : PreferenceFragmentCompat(),
         preferredModeSim2 = findPreference(KEY_NR_MODE_SIM_2)!!
         preferredModeSim2.setValue(getUserPreferredNrMode(requireContext(), SIM_CARD_2).toString())
         preferredModeSim2.setOnPreferenceChangeListener(this)
-        
-        registerSimStateChangeListener(true)
+
         updatePreferenceState()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        registerSimStateChangeListener(true)
     }
 
     override fun onStop() {
         registerSimStateChangeListener(false)
         super.onStop()
-    }
-
-    override fun onDestroy() {
-        registerSimStateChangeListener(false)
-        super.onDestroy()
     }
 
     override fun onPreferenceChange(preference: Preference, newValue: Any): Boolean {
