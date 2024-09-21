@@ -42,8 +42,8 @@ class OplusRadioHidlWrapper : BaseOplusRadioWrapper<IOplusRadio>() {
                 }
                 else -> return null
             }
-        } catch (e: Exception) {
-            logE(tag, "Exception on get oplus radio hidl for simId $simId", e)
+        } catch (_: Exception) {
+            logE(tag, "Failed to get oplus radio hidl for simId $simId")
             return null
         }
     }
@@ -52,8 +52,8 @@ class OplusRadioHidlWrapper : BaseOplusRadioWrapper<IOplusRadio>() {
         try {
             oplusRadio.setNrMode(OPLUS_RIL_SERIAL, mode)
             return true
-        } catch (e: Exception) {
-            logE(tag, "Exception on set nr mode", e)
+        } catch (_: Exception) {
+            logE(tag, "Failed to set nr mode")
             return false
         }
     }

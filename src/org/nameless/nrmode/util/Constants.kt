@@ -35,12 +35,8 @@ fun logD(tag: String, message: String) {
     }
 }
 
-fun logE(tag: String, message: String, exception: Exception? = null) {
-    if (exception == null) {
-        Log.e(tag, message)
-    } else {
-        Log.e(tag, message, exception)
-    }
+fun logE(tag: String, message: String) {
+    Log.e(tag, message)
 }
 
 fun nrmodeToString(mode: Int): String {
