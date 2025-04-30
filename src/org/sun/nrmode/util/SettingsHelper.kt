@@ -3,17 +3,17 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.nameless.nrmode.util
+package org.sun.nrmode.util
 
 import android.content.Context
 import android.os.UserHandle
 import android.provider.Settings
 
-import org.nameless.nrmode.util.Constants.MODE_AUTO
-import org.nameless.nrmode.util.Constants.SETTINGS_SIM_1
-import org.nameless.nrmode.util.Constants.SETTINGS_SIM_2
-import org.nameless.nrmode.util.Constants.SIM_CARD_1
-import org.nameless.nrmode.util.Constants.SIM_CARD_2
+import org.sun.nrmode.util.Constants.MODE_AUTO
+import org.sun.nrmode.util.Constants.SETTINGS_SIM_1
+import org.sun.nrmode.util.Constants.SETTINGS_SIM_2
+import org.sun.nrmode.util.Constants.SIM_CARD_1
+import org.sun.nrmode.util.Constants.SIM_CARD_2
 
 object SettingsHelper {
 

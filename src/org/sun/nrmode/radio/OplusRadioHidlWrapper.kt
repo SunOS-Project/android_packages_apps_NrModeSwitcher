@@ -3,11 +3,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.nameless.nrmode.radio
+package org.sun.nrmode.radio
 
-import org.nameless.nrmode.util.Constants.SIM_CARD_1
-import org.nameless.nrmode.util.Constants.SIM_CARD_2
-import org.nameless.nrmode.util.Constants.logE
+import org.sun.nrmode.util.Constants.SIM_CARD_1
+import org.sun.nrmode.util.Constants.SIM_CARD_2
+import org.sun.nrmode.util.Constants.logE
 
 import vendor.oplus.hardware.radio.V1_0.IOplusRadio
 import vendor.oplus.hardware.radio.V1_0.IOplusRadioIndication

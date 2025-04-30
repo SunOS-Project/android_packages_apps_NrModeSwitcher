@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.nameless.nrmode.service
+package org.sun.nrmode.service
 
 import android.app.Service
 import android.content.BroadcastReceiver
@@ -20,14 +20,14 @@ import android.telephony.TelephonyManager.SIM_STATE_READY
 
 import com.android.internal.telephony.TelephonyIntents.ACTION_SIM_STATE_CHANGED
 
-import org.nameless.nrmode.radio.OplusRadioHelper.setNrMode
-import org.nameless.nrmode.util.Constants.INTENT_SIM_STATE_CHANGED_CUSTOM
-import org.nameless.nrmode.util.Constants.SIM_CARD_1
-import org.nameless.nrmode.util.Constants.SIM_CARD_2
-import org.nameless.nrmode.util.Constants.logD
-import org.nameless.nrmode.util.SettingsHelper.getUserPreferredNrMode
-import org.nameless.nrmode.util.SimStateHelper.isSimCardAvailable
-import org.nameless.nrmode.util.SimStateHelper.setSimCardAvailable
+import org.sun.nrmode.radio.OplusRadioHelper.setNrMode
+import org.sun.nrmode.util.Constants.INTENT_SIM_STATE_CHANGED_CUSTOM
+import org.sun.nrmode.util.Constants.SIM_CARD_1
+import org.sun.nrmode.util.Constants.SIM_CARD_2
+import org.sun.nrmode.util.Constants.logD
+import org.sun.nrmode.util.SettingsHelper.getUserPreferredNrMode
+import org.sun.nrmode.util.SimStateHelper.isSimCardAvailable
+import org.sun.nrmode.util.SimStateHelper.setSimCardAvailable
 
 class SimCardListenerService : Service() {
 

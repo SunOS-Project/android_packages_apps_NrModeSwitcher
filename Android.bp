@@ -37,7 +37,7 @@ android_app {
 prebuilt_etc {
     name: "privapp_whitelist_nrmode",
     sub_dir: "permissions",
-    src: "privapp-permissions-org.nameless.nrmode.xml",
+    src: "privapp-permissions-org.sun.nrmode.xml",
     filename_from_src: true,
     system_ext_specific: true,
 }

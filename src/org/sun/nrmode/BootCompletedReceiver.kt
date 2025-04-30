@@ -3,15 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.nameless.nrmode
+package org.sun.nrmode
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.os.UserHandle
 
-import org.nameless.nrmode.service.SimCardListenerService
-import org.nameless.nrmode.util.Constants.logD
+import org.sun.nrmode.service.SimCardListenerService
+import org.sun.nrmode.util.Constants.logD
 
 class BootCompletedReceiver : BroadcastReceiver() {
 

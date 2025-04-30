@@ -3,10 +3,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.nameless.nrmode.util
+package org.sun.nrmode.util
 
-import org.nameless.nrmode.util.Constants.SIM_CARD_1
-import org.nameless.nrmode.util.Constants.SIM_CARD_2
+import org.sun.nrmode.util.Constants.SIM_CARD_1
+import org.sun.nrmode.util.Constants.SIM_CARD_2
 
 object SimStateHelper {
 
